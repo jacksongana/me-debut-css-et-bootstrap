@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+
+        <title>Positionnement et mise en page en CSS</title>
+       
+        <link rel="stylesheet" href="">
+        <script type="text/javascript" src="" charset="iso-8859-1"></script>
+
+<style>
+    
+html {
+    background: #e6e9e9;
+    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: red;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 4000px;
+    padding: 2em 2em 4em;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+</style>
+
+    </head>
+    
+    <body>
+
+<h1>Positionnement et mise en page en CSS</h1>
+<h1>Click ici pour voir les <a href="css.html">exercies</a></h1>
+
+<h2>Qu'est-ce que le positionnement ?</h2>
+
+    <p>Le positionnement permet de modifier le cours classique de la mise en page pour produire des effets 
+    intéressants.<br>
+    Il y a différents types de positionnement que vous pouvez appliquer à des éléments HTML. Pour utiliser un type 
+    particulier de positionnement sur un élément, nous utilisons la propriété position.</p>
+
+<h3>Positionnement statique</h3>
+
+<p>Le positionnement statique est celui reçu par défaut par chaque élément. Cela veut tout simplement dire 
+    « positionner l'élément selon le flux normal, rien de spécial à voir ici ».</p><br>
+
+<p>Exemple:<br>
+    p class=positioned</p><br>
+    .positioned {
+        position: static;
+        background: yellow;
+      }</p>
+
+<h3>Positionnement relatif</h3>
+
+<p>Le positionnement relatif est très similaire au positionnement statique. Cependant, une fois que l'élément positionné occupe une place 
+    dans le cours normal de la mise en page, vous pourrez modifier sa position finale. Vous pourrez par exemple le 
+    faire chevaucher d'autres éléments de la page.</p>
+
+<p>Exemple:<br>
+    position: relative;
+    top: 30px;
+    left: 30px;</p>
+
+<h3>Positionnement absolu</h3>
+
+<p>Le positionnement absolu nous apporte des résultats bien différents.<br>
+    Si aucun élément ancêtre ne voit sa propriété position explicitement définie, par défaut, tous les éléments 
+    ancêtres auront une position statique et par conséquent, l'élément positionné de façon absolue sera contenu dans 
+    le bloc englobant initial.</p>
+
+<p>Exemple:<br>
+    position: absolute;
+</p>
+
+<h3>Positionnement fixe</h3>
+
+<p>fonctionne exactement de la même manière que le positionnement absolu, avec une différence essentielle : alors
+    que le positionnement absolu fixe un élément en place par rapport à l'élément <html> ou son parent positionné le 
+    plus proche, le positionnement fixe fige un élément en place par rapport à la vue par la fenêtre du navigateur
+    elle-même. Cela signifie que vous pouvez créer des éléments d'interface utilisateur utiles qui sont fixés en 
+    place, comme des menus de navigation persistants.</p>
+
+<p>Exemple:<br>
+    body {
+        width: 500px;
+        height: 1400px;
+        margin: 0 auto;
+      }
+</p>
+
+<h3>Positionnement adhérent Sticky</h3>
+
+<p>Il existe une autre valeur de positionnement disponible : position: sticky. Elle est un peu plus récente que les
+    autres. Il s'agit essentiellement d'un hybride entre position relative et position fixe : l'élément à positionner
+    est en positionnement relatif jusqu'à un certain seuil (par exemple, 10px du haut de la fenêtre), seuil au-delà 
+    duquel il est en positionnement fixe.</p>
+
+<p>Exemple:<br>
+    .positioned {
+        position: sticky;
+        top: 30px;
+        left: 30px;
+      }</p>
+
+<h2>Qu'est-ce que la propriété Display ?</h2>
+
+<p>La propriété Display spécifie si/comment un élément est affiché.display<br>
+Chaque élément HTML a une valeur d’affichage par défaut en fonction du type d’élément dont il s’agit. 
+La valeur d’affichage par défaut pour la plupart des éléments est ou .blockinline</p>
+
+<h3>Display: none</h3>
+
+<p>display: none; est couramment utilisé avec JavaScript pour masquer et afficher des éléments sans les supprimer ni
+les recréer. Jetez un oeil à notre dernier exemple sur cette page si vous voulez savoir comment cela peut être
+réalisé.<br>
+L’élément est utilisé par défaut:<br>
+ "script display: none;"</p>
+
+<h3>Display: inline</h3>
+
+<p>Comme mentionné, chaque élément a une valeur d’affichage par défaut. Cependant, vous pouvez remplacer cela.
+
+Changer un élément en ligne en un élément de bloc, ou vice versa, peut être utile pour donner à la page une apparence
+spécifique, tout en suivant les normes Web.
+    
+Un exemple courant est la création d’éléments en ligne pour les menus horizontaux :</p>
+
+<p>Exemple:<br>
+li {
+    display: inline;
+  }</p>
+
+<h3>Display: block</h3>
+
+<p>La définition de la propriété display d’un élément ne modifie que la façon dont l’élément est affiché, PAS le type
+     d’élément dont il s’agit. Ainsi, un élément en ligne avec n’est pas autorisé à avoir d’autres éléments de bloc à
+      l’intérieur.display: block;</p><br>
+
+<p>Exemple:<br>
+    span {
+    display: block;
+  }</p>
+
+<h3>Display: inline-block</h3>
+
+<p>Par rapport à , la différence majeure est que permet de définir une largeur et une hauteur sur l’élément.display: 
+    inlinedisplay: inline-block
+    De plus, avec , les marges / rembourrages supérieur et inférieur sont respectés, mais avec ils ne le sont pas. 
+    display: inline-blockdisplay: inline
+    Par rapport à , la principale différence est qu’il n’ajoute pas de saut de ligne après l’élément, de sorte que
+     l’élément peut rester à côté d’autres éléments.display: blockdisplay: inline-block
+    L’exemple suivant illustre le comportement différent de , et :display: inlinedisplay: inline-blockdisplay: block</p>
+
+<p>Exemple:<br>
+    span.b {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;
+        background-color: yellow;
+      }</p>
+
+<h3>Display: flex</h3>
+
+<p>Comme nous l’avons spécifié dans le chapitre précédent, il s’agit d’un conteneur flexible (la zone bleue) avec 
+    trois éléments flexibles.<br>
+    Le conteneur flex devient flexible en définissant la propriété sur :displayflex.</p>
+
+<p>Exemple:<br>
+    .flex-container {
+        display: flex;
+      }
+      </p>
+      
+
+</body>
+</html>

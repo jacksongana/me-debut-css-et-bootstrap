@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin-top: 0;
+}
+
+.box1{
+        width: 25vw;
+        height: 100vh;
+        background-color: blue;
+    }
+    .box2{
+        margin-top: -100vh;
+        margin-left: 30vw;
+        width: 25vw;
+        height: 100vh;
+        background-color: rgb(221, 141, 217);
+    }
+
+@media screen and (max-width: 1200px) {
+    .box1{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50vh;
+        width: 300px;
+        height: 100px;
+
+        }
+}
+@media screen and (max-width: 1200px) {
+    .box2{
+      display: none;
+        }
+}
+
+
+    </style>
+</head>
+<body>
+
+       <div class="box1"></div>
+       <div class="box2"></div>
+
+</body>
+</html>
